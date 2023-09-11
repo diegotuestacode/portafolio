@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Diego Tuesta - Portafolio</title>
 </head>
 <body>
+    <div class="loa"> <div class="lds-facebook"><div></div><div></div><div></div></div></div>
+   
     <header class="header">
         <nav class="navbar">
             <div class="navbar__logo">
@@ -22,6 +25,7 @@
                         <a  href="#skills">Skills</a>
                         <a  href="#projects">Projects</a>
                         <a  href="#contact">Contact</a>
+                        <a  href="./assets/cv/DIEGO-TUESTA-CV.pdf" download="Diego-Tuesta-CV">CV</a>
                     </li>
                     <!-- <li class="navbar--item"></li>
                     <li class="navbar--item"></li>
@@ -31,7 +35,7 @@
            <div class="navbar__buttons">
                 <a href="https://www.linkedin.com/in/diego-andres-tuesta-perez/" class="navbar__btn btn--linkedin"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/DiegoTuesta/" class="navbar__btn btn--github"><i class="fa-brands fa-github"></i></a>
-                <a class="navbar__btn btn--dark"><i id="dark" class="fa-solid fa-moon"></i></a>
+                <!-- <a class="navbar__btn btn--dark"><i id="dark" class="fa-solid fa-moon"></i></a> -->
                 <a class="navbar__btn btn--menu"><i class="fa-solid fa-ellipsis-vertical"></i></a>
            </div>
         
@@ -39,14 +43,22 @@
     </header>
 
     <main id="home" class="container">
+        <section id="particles-js"></section>
         <section class="portada">
             <div class="portada__logo">
-                <img src="./img/dt.jpg">
+                <img src="./assets/img/dt.jpg">
             </div>
             <div class="portada__title">
-                <h1>DIEGO <span>TUESTA</span></h1>
-                <h2>Developer at Caja Maynas S.A</h2>
-                <h2>FullStack | FrondEnd | BackEnd</h2>
+                <div class="title">
+                    <h1>DIEGO <span>TUESTA</span></h1>
+                    <h2>Developer at Caja Maynas S.A</h2>
+                </div>
+                
+                <!-- <h2 id="text-animated"><span>FullStack | FrondEnd | BackEnd</span></h2> -->
+                <div class="animated">
+                    <div id="text-animated"></div>
+                </div>
+                
             </div>
         </section>
         <section class="about">
@@ -55,7 +67,9 @@
                 
             </p>
         </section>
-        <section id="skills" class="skills">
+    
+
+        <section  id="skills" class="skills">
             <h2>SKILLS</h2>
             <div class="skills__content">
                 <article class="skill">
@@ -130,13 +144,14 @@
                 </article>
             </div>
         </section>
-        <section id="projects" class="projects">
+        
+        <section id="projects"  class="projects">
             <h2>PROJECTS</h2>
             <div class="projects-container">
                 <article class="card-project">
                     <div class="card__img">
-                        <img src="./img/shop-m.png" alt="">
-                        <img src="./img/shop-w.png" alt="">
+                        <img src="./assets/img/shop-m.png" alt="">
+                        <img src="./assets/img/shop-w.png" alt="">
                     </div>
                     <div class="card__content--project">
                         <h2>E-Commerce</h2>
@@ -152,8 +167,8 @@
                 </article>
                 <article class="card-project">
                     <div class="card__img">
-                        <img src="./img/pokedex-m.png" alt="">
-                        <img src="./img/pokedex-w.png" alt="">
+                        <img src="./assets/img/pokedex-m.png" alt="">
+                        <img src="./assets/img/pokedex-w.png" alt="">
                     </div>
                     <div class="card__content--project">
                         <h2>Pokedex</h2>
@@ -169,8 +184,8 @@
                 </article>
                 <article class="card-project">
                     <div class="card__img">
-                        <img src="./img/ricky-m.png" alt="">
-                        <img src="./img/ricky-w.png" alt="">
+                        <img src="./assets/img/ricky-m.png" alt="">
+                        <img src="./assets/img/ricky-w.png" alt="">
                     </div>
                     <div class="card__content--project">
                         <h2>Rick and Morty</h2>
@@ -186,8 +201,8 @@
                 </article>
                 <article class="card-project">
                     <div class="card__img">
-                        <img src="./img/weather-m.png" alt="">
-                        <img src="./img/weather-w.png" alt="">
+                        <img src="./assets/img/weather-m.png" alt="">
+                        <img src="./assets/img/weather-w.png" alt="">
                     </div>
                     <div class="card__content--project">
                         <h2>Weather App</h2>
@@ -204,13 +219,38 @@
             </div>
         </section>
         <section id="contact" class="contact">
-            <h2>CONTACT</h2>
+            <h2>CONTACT ME</h2>
             <div class="contact-container">
-                <a href="https://www.linkedin.com/in/diego-andres-tuesta-perez/" ><i class="fa-brands fa-linkedin"></i></a>
+                <!-- <a href="https://www.linkedin.com/in/diego-andres-tuesta-perez/" ><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/DiegoTuesta/" ><i class="fa-brands fa-github"></i></a>
                 <a href="mailto:diego.productividad@gmail.com" ><i class="fa-solid fa-envelope"></i></a>
-                <a href="tel:+51950968012"><i class="fa-solid fa-mobile"></i></a>
-                
+                <a href="tel:+51950968012"><i class="fa-solid fa-mobile"></i></a> -->
+                <!-- <form id="formulario" action="https://formsubmit.co/b5e87905e85e9a05adec84cde345f658" method="POST"  class="formulario"> -->
+                <form id="formulario" class="formulario">
+                    <div class="form-control">
+                        <label for="email_name">Name</label>
+                        <input id="email_name" name="email_name" required type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="email_email">Email</label>
+                        <input id="email_email" name="email_email" required type="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="email_subject">Subject</label>
+                        <input id="email_subject" name="email_subject" required type="text">
+                    </div>
+                    <div class="form-control">
+                        <label for="email_message">Message</label>
+                        <textarea name="email_message" required id="email_message"  rows="5"></textarea>
+                    </div>
+                   
+                    <div>
+                       <button class="btn-form" type="submit">Send</button>
+                    </div>
+                  
+                    
+                    
+                </form>
             </div>
         </section>
     </main>
@@ -219,8 +259,15 @@
             <p>&copy; Diego Tuesta - created with <i class="fa-solid fa-heart"></i> for the world!</p>
         </nav>
     </footer>
-
-    <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/73d94b16ae.js" crossorigin="anonymous"></script>
+    <!-- https://vincentgarreau.com/particles.js/ -->
+    <script type="text/javascript" src="./assets/js/particles.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/js/kit.fontawesome.com_73d94b16ae.js" crossorigin="anonymous"></script>
+    <!-- typed.js -->
+    <script type="text/javascript" src="./assets/js/unpkg.com_typed.js@2.0.16_dist_typed.umd.js" crossorigin="anonymous"></script>
+    <!-- email envio -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="text/javascript" src="./assets/js/main.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
