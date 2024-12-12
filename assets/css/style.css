@@ -33,7 +33,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
 }
+/* Ajustar el desplazamiento adicional */
+:target {
+    padding-top: 70px;  /* Desplazar el contenido hacia abajo */
+    margin-top: -70px;  /* Dejar el espacio libre arriba */
+  }
 body{
     /* width: 100%;
     height: 100vh; */
